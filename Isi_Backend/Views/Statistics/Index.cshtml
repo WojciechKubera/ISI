@@ -1,0 +1,149 @@
+﻿@model IEnumerable<Isi_Backend.Models.Statistics>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewConfirmed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalConfirmed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewDeaths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDeaths)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewRecovered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalRecovered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wojewodztwo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Liczba_przypadkow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zgony_w_wyniku_covid_i_chorob_wspolistniejacych)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.liczba_zlecen_poz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.liczba_osob_objetych_kwarantanna)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.iczba_wykonanych_testow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.liczba_testow_z_wynikiem_pozytywnym)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.liczba_testow_z_wynikiem_negatywnym)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.liczba_pozostalych_testow)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teryt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.stan_rekordu_na)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewConfirmed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalConfirmed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewDeaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDeaths)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewRecovered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalRecovered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wojewodztwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Liczba_przypadkow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zgony_w_wyniku_covid_i_chorob_wspolistniejacych)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.liczba_zlecen_poz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.liczba_osob_objetych_kwarantanna)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.iczba_wykonanych_testow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.liczba_testow_z_wynikiem_pozytywnym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.liczba_testow_z_wynikiem_negatywnym)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.liczba_pozostalych_testow)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teryt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.stan_rekordu_na)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

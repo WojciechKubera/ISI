@@ -1,0 +1,17 @@
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\appsettings.json
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\Isi_Backend.deps.json
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\Isi_Backend.runtimeconfig.json
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\Isi_Backend.runtimeconfig.dev.json
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\Isi_Backend.dll
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\bin\Debug\netcoreapp2.1\Isi_Backend.pdb
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.csprojAssemblyReference.cache
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.AssemblyInfoInputs.cache
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.AssemblyInfo.cs
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.csproj.CoreCompileInputs.cache
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.RazorAssemblyInfo.cache
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.RazorAssemblyInfo.cs
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.RazorTargetAssemblyInfo.cache
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.dll
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.pdb
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp2.1\Isi_Backend.genruntimeconfig.cache

@@ -1,0 +1,138 @@
+﻿@model Isi_Backend.Models.Statistics
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Statistics</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewConfirmed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewConfirmed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalConfirmed)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalConfirmed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewDeaths)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewDeaths)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalDeaths)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalDeaths)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NewRecovered)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NewRecovered)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalRecovered)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalRecovered)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Wojewodztwo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Wojewodztwo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Liczba_przypadkow)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Liczba_przypadkow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.zgony_w_wyniku_covid_i_chorob_wspolistniejacych)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.zgony_w_wyniku_covid_i_chorob_wspolistniejacych)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.liczba_zlecen_poz)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.liczba_zlecen_poz)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.liczba_osob_objetych_kwarantanna)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.liczba_osob_objetych_kwarantanna)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.iczba_wykonanych_testow)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.iczba_wykonanych_testow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.liczba_testow_z_wynikiem_pozytywnym)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.liczba_testow_z_wynikiem_pozytywnym)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.liczba_testow_z_wynikiem_negatywnym)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.liczba_testow_z_wynikiem_negatywnym)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.liczba_pozostalych_testow)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.liczba_pozostalych_testow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.teryt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.teryt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.stan_rekordu_na)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.stan_rekordu_na)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

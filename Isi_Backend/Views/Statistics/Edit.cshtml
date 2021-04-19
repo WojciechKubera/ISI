@@ -1,0 +1,129 @@
+﻿@model Isi_Backend.Models.Statistics
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Statistics</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewConfirmed" class="control-label"></label>
+                <input asp-for="NewConfirmed" class="form-control" />
+                <span asp-validation-for="NewConfirmed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalConfirmed" class="control-label"></label>
+                <input asp-for="TotalConfirmed" class="form-control" />
+                <span asp-validation-for="TotalConfirmed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewDeaths" class="control-label"></label>
+                <input asp-for="NewDeaths" class="form-control" />
+                <span asp-validation-for="NewDeaths" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalDeaths" class="control-label"></label>
+                <input asp-for="TotalDeaths" class="form-control" />
+                <span asp-validation-for="TotalDeaths" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewRecovered" class="control-label"></label>
+                <input asp-for="NewRecovered" class="form-control" />
+                <span asp-validation-for="NewRecovered" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalRecovered" class="control-label"></label>
+                <input asp-for="TotalRecovered" class="form-control" />
+                <span asp-validation-for="TotalRecovered" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wojewodztwo" class="control-label"></label>
+                <input asp-for="Wojewodztwo" class="form-control" />
+                <span asp-validation-for="Wojewodztwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Liczba_przypadkow" class="control-label"></label>
+                <input asp-for="Liczba_przypadkow" class="form-control" />
+                <span asp-validation-for="Liczba_przypadkow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="zgony_w_wyniku_covid_bez_chorob_wspolistniejacych" class="control-label"></label>
+                <input asp-for="zgony_w_wyniku_covid_bez_chorob_wspolistniejacych" class="form-control" />
+                <span asp-validation-for="zgony_w_wyniku_covid_bez_chorob_wspolistniejacych" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="zgony_w_wyniku_covid_i_chorob_wspolistniejacych" class="control-label"></label>
+                <input asp-for="zgony_w_wyniku_covid_i_chorob_wspolistniejacych" class="form-control" />
+                <span asp-validation-for="zgony_w_wyniku_covid_i_chorob_wspolistniejacych" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liczba_zlecen_poz" class="control-label"></label>
+                <input asp-for="liczba_zlecen_poz" class="form-control" />
+                <span asp-validation-for="liczba_zlecen_poz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liczba_osob_objetych_kwarantanna" class="control-label"></label>
+                <input asp-for="liczba_osob_objetych_kwarantanna" class="form-control" />
+                <span asp-validation-for="liczba_osob_objetych_kwarantanna" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="iczba_wykonanych_testow" class="control-label"></label>
+                <input asp-for="iczba_wykonanych_testow" class="form-control" />
+                <span asp-validation-for="iczba_wykonanych_testow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liczba_testow_z_wynikiem_pozytywnym" class="control-label"></label>
+                <input asp-for="liczba_testow_z_wynikiem_pozytywnym" class="form-control" />
+                <span asp-validation-for="liczba_testow_z_wynikiem_pozytywnym" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liczba_testow_z_wynikiem_negatywnym" class="control-label"></label>
+                <input asp-for="liczba_testow_z_wynikiem_negatywnym" class="form-control" />
+                <span asp-validation-for="liczba_testow_z_wynikiem_negatywnym" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liczba_pozostalych_testow" class="control-label"></label>
+                <input asp-for="liczba_pozostalych_testow" class="form-control" />
+                <span asp-validation-for="liczba_pozostalych_testow" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teryt" class="control-label"></label>
+                <input asp-for="teryt" class="form-control" />
+                <span asp-validation-for="teryt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="stan_rekordu_na" class="control-label"></label>
+                <input asp-for="stan_rekordu_na" class="form-control" />
+                <span asp-validation-for="stan_rekordu_na" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
