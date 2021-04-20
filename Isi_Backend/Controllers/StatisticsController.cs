@@ -244,8 +244,9 @@ namespace Isi_Backend.Controllers
         [Route("DownloadCsv")]
         public async Task<IActionResult> DownloadCsv()
         {
-            string startupPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-               
+            string startupPath = Path.Combine(Environment.CurrentDirectory, "akutalne_dane_wojewodztwa.csv");
+
+
             WebClient webClient = new WebClient();
           
             webClient.DownloadFile("https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data", startupPath);
