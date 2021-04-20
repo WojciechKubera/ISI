@@ -108,3 +108,5 @@ C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\net
 C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp3.0\Isi_Backend.dll
 C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp3.0\Isi_Backend.pdb
 C:\studia_mag_zdobycze\semestr 3- mój\ISI\Isi_Backend\Isi_Backend\obj\Debug\netcoreapp3.0\Isi_Backend.genruntimeconfig.cache
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\ISI_Backend\Isi_Backend\obj\Debug\netcoreapp3.0\Isi_Backend.Properties.Resources.resources
+C:\studia_mag_zdobycze\semestr 3- mój\ISI\ISI_Backend\Isi_Backend\obj\Debug\netcoreapp3.0\Isi_Backend.csproj.GenerateResource.cache

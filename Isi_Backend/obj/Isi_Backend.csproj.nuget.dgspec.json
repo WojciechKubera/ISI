@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\Isi_Backend\\Isi_Backend\\Isi_Backend.csproj": {}
+    "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\Isi_Backend.csproj": {}
   },
   "projects": {
-    "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\Isi_Backend\\Isi_Backend\\Isi_Backend.csproj": {
+    "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\Isi_Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\Isi_Backend\\Isi_Backend\\Isi_Backend.csproj",
+        "projectUniqueName": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\Isi_Backend.csproj",
         "projectName": "Isi_Backend",
-        "projectPath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\Isi_Backend\\Isi_Backend\\Isi_Backend.csproj",
+        "projectPath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\Isi_Backend.csproj",
         "packagesPath": "C:\\Users\\lexsi\\.nuget\\packages\\",
-        "outputPath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\Isi_Backend\\Isi_Backend\\obj\\",
+        "outputPath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

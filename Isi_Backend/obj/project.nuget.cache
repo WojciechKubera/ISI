@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Htmo0SBbAwGE/f7cVP8ShSklVnRoXYFiqnWURl3wMXDu+1wFsxZVVybGVh/WiHsNgXNlhM2pMFdWLxN+xd9aYA==",
+  "dgSpecHash": "7WVHSlXfLytb9elngEjS3g85rCEiSGY8bIuEjUUvx3Ajw3GgBv0pCPux5QGIZ/Kmj0QUDXT+Kbkd/qS+WqtycA==",
   "success": true,
-  "projectFilePath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\Isi_Backend\\Isi_Backend\\Isi_Backend.csproj",
+  "projectFilePath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\Isi_Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lexsi\\.nuget\\packages\\documentformat.openxml\\2.12.3\\documentformat.openxml.2.12.3.nupkg.sha512",
     "C:\\Users\\lexsi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

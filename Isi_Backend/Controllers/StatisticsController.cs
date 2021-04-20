@@ -33,21 +33,23 @@ namespace Isi_Backend.Controllers
         [Route("Index")]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Statistics.ToListAsync());
+            var statistics =  _context.Statistics;
+            //return View(await _context.Statistics.ToListAsync());
+            return Ok(JsonConvert.SerializeObject(statistics));
         }
 
         // GET: Statistics/Details/5
-        [HttpGet("{id}")]
-        [Route("Details/{id}")]
-        public async Task<IActionResult> Details(int? id)
+        [HttpGet("{country}")]
+        [Route("Details/{country}")]
+        public async Task<IActionResult> Details(string? country)
         {
-            if (id == null)
+            if (country == null)
             {
                 return NotFound();
             }
 
             var statistics = await _context.Statistics
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.Country == country || m.CountryCode == country);
             if (statistics == null)
             {
                 return NotFound();
@@ -190,7 +192,6 @@ namespace Isi_Backend.Controllers
 
             var json = JObject.Parse(jsonString);
             StatisticsDeserializecs statisticsDeserializecs = JsonConvert.DeserializeObject<StatisticsDeserializecs>(jsonString);
-            List<Statistics> list = new List<Statistics>();
             Statistics stat = new Statistics();
 
             stat.Country = "World";
@@ -201,18 +202,7 @@ namespace Isi_Backend.Controllers
             stat.TotalConfirmed = statisticsDeserializecs.global.TotalConfirmed;
             stat.TotalDeaths = statisticsDeserializecs.global.TotalDeaths;
             stat.TotalRecovered = statisticsDeserializecs.global.TotalRecovered;
-            stat.Wojewodztwo = null;
-            stat.Liczba_przypadkow = statisticsDeserializecs.global.NewConfirmed;
-            stat.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych = 0;
-            stat.zgony_w_wyniku_covid_i_chorob_wspolistniejacych = 0;
-            stat.liczba_zlecen_poz = 0;
-            stat.liczba_osob_objetych_kwarantanna = 0;
-            stat.iczba_wykonanych_testow = 0;
-            stat.liczba_testow_z_wynikiem_pozytywnym = 0;
-            stat.liczba_testow_z_wynikiem_negatywnym = 0;
-            stat.liczba_pozostalych_testow = 0;
-            stat.teryt = 0;
-            stat.stan_rekordu_na = 0;
+          
             if (ModelState.IsValid)
             {
                 _context.Add(stat);
@@ -225,6 +215,8 @@ namespace Isi_Backend.Controllers
                 var t = new Statistics();
 
                 t.Country = item.Country;
+                t.Slug = item.Slug;
+                t.CountryCode = item.CountryCode;
                 t.Date = item.Date;
                 t.NewConfirmed = item.NewConfirmed;
                 t.NewDeaths = item.NewDeaths;
@@ -232,18 +224,7 @@ namespace Isi_Backend.Controllers
                 t.TotalConfirmed = item.TotalConfirmed;
                 t.TotalDeaths = item.TotalDeaths;
                 t.TotalRecovered = item.TotalRecovered;
-                t.Wojewodztwo = null;
-                t.Liczba_przypadkow = item.NewConfirmed;
-                t.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych = 0;
-                t.zgony_w_wyniku_covid_i_chorob_wspolistniejacych = 0;
-                t.liczba_zlecen_poz = 0;
-                t.liczba_osob_objetych_kwarantanna = 0;
-                t.iczba_wykonanych_testow = 0;
-                t.liczba_testow_z_wynikiem_pozytywnym = 0;
-                t.liczba_testow_z_wynikiem_negatywnym = 0;
-                t.liczba_pozostalych_testow = 0;
-                t.teryt = 0;
-                t.stan_rekordu_na = 0;
+               
 
                 if (ModelState.IsValid)
                 {
@@ -259,9 +240,17 @@ namespace Isi_Backend.Controllers
             return Ok(); ;
         }
 
-        static void GetStatisticsValues()
+        [HttpGet]
+        [Route("DownloadCsv")]
+        public async Task<IActionResult> DownloadCsv()
         {
-           
+            string startupPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+               
+            WebClient webClient = new WebClient();
+          
+            webClient.DownloadFile("https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data", startupPath);
+
+            return Ok(); ;
         }
     }
       

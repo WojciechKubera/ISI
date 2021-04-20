@@ -29,6 +29,9 @@ namespace Isi_Backend.Migrations
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CountryCode")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
@@ -44,6 +47,9 @@ namespace Isi_Backend.Migrations
                     b.Property<int>("NewRecovered")
                         .HasColumnType("int");
 
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("TotalConfirmed")
                         .HasColumnType("int");
 
@@ -55,9 +61,6 @@ namespace Isi_Backend.Migrations
 
                     b.Property<string>("Wojewodztwo")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("iczba_wykonanych_testow")
-                        .HasColumnType("int");
 
                     b.Property<int>("liczba_osob_objetych_kwarantanna")
                         .HasColumnType("int");
@@ -71,14 +74,17 @@ namespace Isi_Backend.Migrations
                     b.Property<int>("liczba_testow_z_wynikiem_pozytywnym")
                         .HasColumnType("int");
 
+                    b.Property<int>("liczba_wykonanych_testow")
+                        .HasColumnType("int");
+
                     b.Property<int>("liczba_zlecen_poz")
                         .HasColumnType("int");
 
                     b.Property<int>("stan_rekordu_na")
                         .HasColumnType("int");
 
-                    b.Property<int>("teryt")
-                        .HasColumnType("int");
+                    b.Property<string>("teryt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("zgony_w_wyniku_covid_bez_chorob_wspolistniejacych")
                         .HasColumnType("int");
