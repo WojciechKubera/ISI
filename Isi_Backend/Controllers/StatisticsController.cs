@@ -52,8 +52,8 @@ namespace Isi_Backend.Controllers
                 return NotFound();
             }
 
-            var statistics = await _context.Statistics
-                .FirstOrDefaultAsync(m => m.Country == country || m.CountryCode == country);
+            var statistics = _context.Statistics.Where(m => m.Country == country || m.CountryCode == country).ToList();
+                //.FirstOrDefaultAsync(m => m.Country == country || m.CountryCode == country);
             if (statistics == null)
             {
                 return NotFound();
