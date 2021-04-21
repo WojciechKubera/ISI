@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7WVHSlXfLytb9elngEjS3g85rCEiSGY8bIuEjUUvx3Ajw3GgBv0pCPux5QGIZ/Kmj0QUDXT+Kbkd/qS+WqtycA==",
+  "dgSpecHash": "iTsCA/eUA5W+GUCYcpM1LMCeov6Oiqgsl0UsmgVUkziv1UA+cmvEMedLSFDMURcxAQ3ynng8aXfkf0RAHlHQ+g==",
   "success": true,
   "projectFilePath": "C:\\studia_mag_zdobycze\\semestr 3- mój\\ISI\\ISI_Backend\\Isi_Backend\\Isi_Backend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lexsi\\.nuget\\packages\\csvhelper\\26.1.0\\csvhelper.26.1.0.nupkg.sha512",
     "C:\\Users\\lexsi\\.nuget\\packages\\documentformat.openxml\\2.12.3\\documentformat.openxml.2.12.3.nupkg.sha512",
     "C:\\Users\\lexsi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lexsi\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",

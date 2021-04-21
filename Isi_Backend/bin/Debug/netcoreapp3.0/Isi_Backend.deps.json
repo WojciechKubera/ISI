@@ -30,6 +30,7 @@
     ".NETCoreApp,Version=v3.0": {
       "Isi_Backend/1.0.0": {
         "dependencies": {
+          "CsvHelper": "26.1.0",
           "DocumentFormat.OpenXml": "2.12.3",
           "Microsoft.AspNetCore": "2.1.7",
           "Microsoft.AspNetCore.Cors": "2.2.0",
@@ -311,6 +312,20 @@
         },
         "compile": {
           "Isi_Backend.dll": {}
+        }
+      },
+      "CsvHelper/26.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/CsvHelper.dll": {
+            "assemblyVersion": "26.0.0.0",
+            "fileVersion": "26.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/CsvHelper.dll": {}
         }
       },
       "DocumentFormat.OpenXml/2.12.3": {
@@ -4262,6 +4277,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CsvHelper/26.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bcyX9U6OYwx2P5pSgyiULEpGPVu8m+SMnC4atB9W8Srp+jQbsvAwgZ1PxSNfhM4CULhShYTDz22ABroCaxEpOQ==",
+      "path": "csvhelper/26.1.0",
+      "hashPath": "csvhelper.26.1.0.nupkg.sha512"
     },
     "DocumentFormat.OpenXml/2.12.3": {
       "type": "package",

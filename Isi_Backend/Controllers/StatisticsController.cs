@@ -13,6 +13,10 @@ using DocumentFormat.OpenXml.Office.CustomUI;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using CsvHelper;
+using System.Globalization;
+using System.Data;
+using CsvHelper.Configuration;
 
 namespace Isi_Backend.Controllers
 {
@@ -244,12 +248,62 @@ namespace Isi_Backend.Controllers
         [Route("DownloadCsv")]
         public async Task<IActionResult> DownloadCsv()
         {
-            string startupPath = Path.Combine(Environment.CurrentDirectory, "akutalne_dane_wojewodztwa.csv");
+            string startupPath = Path.Combine(Environment.CurrentDirectory,"csv", "akutalne_dane_wojewodztwa.csv");
 
 
-            WebClient webClient = new WebClient();
-          
-            webClient.DownloadFile("https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data", startupPath);
+            // WebClient webClient = new WebClient();
+
+            // webClient.DownloadFile("https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data", startupPath);
+            var config = new CsvConfiguration(CultureInfo.CurrentCulture)
+            {
+                HasHeaderRecord = true,
+                Delimiter = ";"
+            };
+            using (var reader = new StreamReader(startupPath))
+            using (var csv = new CsvReader(reader,config))
+            {
+               
+                // Do any configuration to `CsvReader` before creating CsvDataReader.
+                using (var dr = new CsvDataReader(csv))
+                {
+                    var dt = new DataTable();
+                    dt.Load(dr);
+                    var test = dt.Rows[1].ItemArray[14].ToString();
+                    //var date = DateTime.Parse(test);
+
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        var t = new Statistics();
+
+                        t.Country = "Poland";
+                        t.CountryCode = "PL";
+                        t.Wojewodztwo = dt.Rows[i].ItemArray[0].ToString();
+                        t.Liczba_przypadkow = int.Parse(dt.Rows[i].ItemArray[1].ToString());
+                        t.NewDeaths = int.Parse(dt.Rows[i].ItemArray[3].ToString());
+                        t.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych = int.Parse(dt.Rows[i].ItemArray[4].ToString());
+                        t.zgony_w_wyniku_covid_i_chorob_wspolistniejacych = int.Parse(dt.Rows[i].ItemArray[5].ToString());
+                        t.liczba_zlecen_poz = int.Parse(dt.Rows[i].ItemArray[6].ToString());
+                        t.NewRecovered = t.liczba_zlecen_poz = int.Parse(dt.Rows[i].ItemArray[7].ToString());
+                        t.liczba_osob_objetych_kwarantanna = int.Parse(dt.Rows[i].ItemArray[8].ToString());
+                        t.liczba_wykonanych_testow = int.Parse(dt.Rows[i].ItemArray[9].ToString());
+                        t.liczba_testow_z_wynikiem_pozytywnym = int.Parse(dt.Rows[i].ItemArray[10].ToString());
+                        t.liczba_testow_z_wynikiem_negatywnym = int.Parse(dt.Rows[i].ItemArray[11].ToString());
+                        t.liczba_pozostalych_testow = int.Parse(dt.Rows[i].ItemArray[12].ToString());
+                        t.teryt = dt.Rows[i].ItemArray[13].ToString();
+                        t.Date = DateTime.Parse(dt.Rows[i].ItemArray[14].ToString());
+
+                        if (ModelState.IsValid)
+                        {
+                            _context.Add(t);
+                            _context.SaveChanges();
+
+                        }
+
+
+                    }
+                }
+            }
+
 
             return Ok(); ;
         }
