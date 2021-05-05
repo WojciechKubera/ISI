@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Isi_Backend.Data;
 using Microsoft.Extensions.Hosting;
+using Isi_Backend.Controllers;
 
 namespace Isi_Backend
 {
@@ -54,7 +55,7 @@ namespace Isi_Backend
                 app.UseHsts();
             }
             app.UseStaticFiles();
-            app.UseCors("CorsPolicy");
+            app.UseCors();
             app.UseRouting();
             app.UseAuthorization();
             app.UseHttpsRedirection();
@@ -62,8 +63,13 @@ namespace Isi_Backend
             {
                 endpoints.MapDefaultControllerRoute();
             });
-            
-
+            ServicesHolder.serviceProvider = app.ApplicationServices;
+            //runStatsScheduler();
+        }
+        public void runStatsScheduler()
+        {
+            var statsScheduller = new StatisticsScheduller();
+            statsScheduller.run();
         }
     }
 }

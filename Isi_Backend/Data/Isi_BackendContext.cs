@@ -9,6 +9,10 @@ namespace Isi_Backend.Data
 {
     public class Isi_BackendContext : DbContext
     {
+
+        public Isi_BackendContext()
+        {
+        }
         public Isi_BackendContext (DbContextOptions<Isi_BackendContext> options)
             : base(options)
         {

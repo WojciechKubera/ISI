@@ -20,7 +20,7 @@ using CsvHelper.Configuration;
 
 namespace Isi_Backend.Controllers
 {
-
+   
     [Route("api/[controller]")]
     [ApiController]
     public class StatisticsController : Controller
@@ -31,11 +31,16 @@ namespace Isi_Backend.Controllers
         {
             _context = context;
         }
-
+        public static readonly string[] POLISH_LOCALIZATIONS = {
+    "caly-kraj", "dolnoslaskie", "kujawsko-pomorskie",
+    "lubelskie", "lubuskie", "lodzkie", "malopolskie",
+    "mazowieckie", "opolskie", "podkarpackie", "podlaskie",
+    "pomorskie", "slaskie", "swietokrzyskie",
+    "warminsko-mazurskie", "wielkopolskie", "zachodniopomorskie" };
         // GET: Statistics
         [HttpGet]
-        [Route("Index")]
-        public async Task<IActionResult> Index()
+        [Route("All")]
+        public async Task<IActionResult> All()
         {
             var statistics =  _context.Statistics;
             //return View(await _context.Statistics.ToListAsync());
@@ -248,12 +253,15 @@ namespace Isi_Backend.Controllers
         [Route("DownloadCsv")]
         public async Task<IActionResult> DownloadCsv()
         {
-            string startupPath = Path.Combine(Environment.CurrentDirectory,"csv", "akutalne_dane_wojewodztwa.csv");
+            
 
 
-            // WebClient webClient = new WebClient();
+        string startupPath = Path.Combine(Environment.CurrentDirectory,"csv", "akutalne_dane_wojewodztwa.csv");
 
-            // webClient.DownloadFile("https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data", startupPath);
+
+            WebClient webClient = new WebClient();
+
+            webClient.DownloadFile("https://www.arcgis.com/sharing/rest/content/items/153a138859bb4c418156642b5b74925b/data", startupPath);
             var config = new CsvConfiguration(CultureInfo.CurrentCulture)
             {
                 HasHeaderRecord = true,
@@ -277,7 +285,7 @@ namespace Isi_Backend.Controllers
 
                         t.Country = "Poland";
                         t.CountryCode = "PL";
-                        t.Wojewodztwo = dt.Rows[i].ItemArray[0].ToString();
+                        t.Wojewodztwo = POLISH_LOCALIZATIONS[i];
                         t.Liczba_przypadkow = int.Parse(dt.Rows[i].ItemArray[1].ToString());
                         t.NewDeaths = int.Parse(dt.Rows[i].ItemArray[3].ToString());
                         t.zgony_w_wyniku_covid_bez_chorob_wspolistniejacych = int.Parse(dt.Rows[i].ItemArray[4].ToString());
