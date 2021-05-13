@@ -16,8 +16,24 @@ namespace Isi_Backend.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.5")
+                .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Isi_Backend.Models.Emails", b =>
+                {
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("condition")
+                        .HasColumnType("int");
+
+                    b.Property<string>("countryCondition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("email");
+
+                    b.ToTable("Emails");
+                });
 
             modelBuilder.Entity("Isi_Backend.Models.Statistics", b =>
                 {

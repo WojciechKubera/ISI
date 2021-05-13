@@ -10,7 +10,6 @@ using Isi_Backend.Models;
 using System.Net;
 using Newtonsoft.Json;
 using DocumentFormat.OpenXml.Office.CustomUI;
-using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using CsvHelper;

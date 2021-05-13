@@ -65,11 +65,20 @@ namespace Isi_Backend
             });
             ServicesHolder.serviceProvider = app.ApplicationServices;
             //runStatsScheduler();
+            testSend();
+            
         }
         public void runStatsScheduler()
         {
             var statsScheduller = new StatisticsScheduller();
             statsScheduller.run();
         }
+
+        public void testSend()
+        {
+            var emailSender = new EmailsController();
+            emailSender.Send();
+        }
+
     }
 }

@@ -19,5 +19,7 @@ namespace Isi_Backend.Data
         }
 
         public DbSet<Isi_Backend.Models.Statistics> Statistics { get; set; }
+
+        public DbSet<Isi_Backend.Models.Emails> Emails { get; set; }
     }
 }

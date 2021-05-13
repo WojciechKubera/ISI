@@ -51,6 +51,14 @@
               "target": "Package",
               "version": "[2.12.3, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.51.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            },
             "Microsoft.AspNetCore": {
               "target": "Package",
               "version": "[2.1.7, )"
@@ -80,21 +88,25 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[3.0.0, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.0.0, )"
             },
             "Microsoft.VisualStudio.Web.BrowserLink": {
               "target": "Package",
               "version": "[2.1.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [
